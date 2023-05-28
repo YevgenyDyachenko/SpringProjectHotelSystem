@@ -42,9 +42,14 @@ public class RoomService {
         return roomRepository.findById(id).map(RoomService::buildRoomDto);
     }
 
-    public Optional<Room> findByName(String name) {
-        return roomRepository.findRoomByName(name);
+//    public Optional<Room> findByName(String name) {
+//        return roomRepository.findRoomByName(name);
+//    }
+
+    public Optional<RoomDto> findByName(String name) {
+        return roomRepository.findRoomByName(name).map(RoomService::buildRoomDto);
     }
+
 
 //    public Optional<Student> findByNameAndAge(String name, int age) {
 //        return studentRepository.findStudentByName(name);

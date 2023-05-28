@@ -29,14 +29,14 @@ public class RoomController {
     }
 
     @GetMapping("/rooms/name/{name}")
-    public ResponseEntity<Room> findByName(@PathVariable String name) {
+    public ResponseEntity<RoomDto> findByName(@PathVariable String name) {
         return roomService.findByName(name)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @GetMapping("/rooms/find")
-    public ResponseEntity<Room> findByParam(@RequestParam String name, @RequestParam int price) {
+    public ResponseEntity<RoomDto> findByParam(@RequestParam String name, @RequestParam int price) {
         return roomService.findByName(name)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());

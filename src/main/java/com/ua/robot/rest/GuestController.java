@@ -1,9 +1,7 @@
 package com.ua.robot.rest;
 
 import com.ua.robot.domain.Guest;
-import com.ua.robot.domain.Room;
 import com.ua.robot.dto.GuestDto;
-import com.ua.robot.dto.RoomDto;
 import com.ua.robot.service.GuestService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -43,10 +41,18 @@ public class GuestController {
     }
 
     @GetMapping("/guests/name/{name}")
-    public ResponseEntity<Guest> findByLastName(@PathVariable String name) {
+    public ResponseEntity<GuestDto> findByLastName(@PathVariable String name) {
         return guestService.findByLastName(name)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
+
+    @GetMapping("/guests/passport/{passport}")
+    public ResponseEntity<GuestDto> findByPassport(@PathVariable String passport) {
+        return guestService.findByPassport(passport)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
 
 }

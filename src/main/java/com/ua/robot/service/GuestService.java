@@ -44,9 +44,14 @@ public class GuestService {
         return guestRepository.findById(id).map(GuestService::buildGuestDto);
     }
 
-    public Optional<Guest> findByLastName(String lastName) {
-        return guestRepository.findGuestByLastName(lastName);
+    public Optional<GuestDto> findByLastName(String lastName) {
+        return guestRepository.findGuestByLastName(lastName).map(GuestService::buildGuestDto);
     }
+
+    public Optional<GuestDto> findByPassport(String passport) {
+        return guestRepository.findGuestByPassport(passport).map(GuestService::buildGuestDto);
+    }
+
 
     public void deleteGuest(Long guestId){ guestRepository.deleteById(guestId);}
 

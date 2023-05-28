@@ -1,6 +1,7 @@
 package com.ua.robot.repository;
 
 import com.ua.robot.domain.Room;
+import com.ua.robot.dto.RoomDto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
