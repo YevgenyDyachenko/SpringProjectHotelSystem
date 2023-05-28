@@ -47,9 +47,17 @@ public class StudentService {
         return studentRepository.findStudentByName(name);
     }
 
+//    public Optional<Student> findByNameAndAge(String name, int age) {
+//        return studentRepository.findStudentByName(name);
+//    }
+
+
+
     public void save(Student student) {
         studentRepository.save(student);
     }
+
+    public void delete(Long studentId){ studentRepository.deleteById(studentId);}
 
     public void addGroup(Long studentId, Long groupId) {
         var group = studentGroupRepository.findById(groupId).get();
