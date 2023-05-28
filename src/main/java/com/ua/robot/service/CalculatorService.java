@@ -1,7 +1,7 @@
 package com.ua.robot.service;
 
-import com.ua.robot.domain.Student;
-import com.ua.robot.repository.StudentRepository;
+import com.ua.robot.domain.Room;
+import com.ua.robot.repository.RoomRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CalculatorService {
 
-    private final StudentRepository studentRepository;
+    private final RoomRepository roomRepository;
 
     public int multiply(int a, int b) {
         return a * b;
@@ -28,7 +28,7 @@ public class CalculatorService {
     }
 
     public long getStudentsCount() {
-        List<Student> students = studentRepository.findAll();
-        return studentRepository.count();
+        List<Room> rooms = roomRepository.findAll();
+        return roomRepository.count();
     }
 }

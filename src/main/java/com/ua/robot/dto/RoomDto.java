@@ -5,11 +5,11 @@ import lombok.Data;
 
 @Data
 @Builder
-public class StudentDto {
+public class RoomDto {
 
     private Long id;
     private String name;
     private int age;
     private String address;
-    private String groupName;
+    private String guestName;
 }

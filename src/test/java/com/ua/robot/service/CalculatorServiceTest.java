@@ -1,7 +1,7 @@
 package com.ua.robot.service;
 
-import com.ua.robot.domain.Student;
-import com.ua.robot.repository.StudentRepository;
+import com.ua.robot.domain.Room;
+import com.ua.robot.repository.RoomRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,7 +19,7 @@ class CalculatorServiceTest {
     private CalculatorService calculatorService;
 
     @MockBean
-    private StudentRepository studentRepository;
+    private RoomRepository roomRepository;
 
     @Test
     void shouldMultiply() {
@@ -38,8 +38,8 @@ class CalculatorServiceTest {
 
     @Test
     void shouldGetStudentsCount() {
-        when(studentRepository.count()).thenReturn(10L);
-        when(studentRepository.findAll()).thenReturn(List.of(new Student(), new Student()));
+        when(roomRepository.count()).thenReturn(10L);
+        when(roomRepository.findAll()).thenReturn(List.of(new Room(), new Room()));
 
         assertEquals(10L, calculatorService.getStudentsCount());
     }

@@ -9,7 +9,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Student {
+public class Room {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +22,6 @@ public class Student {
     private String address;
 
     @ManyToOne
-    @JoinColumn(name="student_group_id")
-    private StudentGroup studentGroup;
+    @JoinColumn(name="guest_id")
+    private Guest guest;
 }

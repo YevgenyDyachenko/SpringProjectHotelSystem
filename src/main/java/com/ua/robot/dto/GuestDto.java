@@ -7,9 +7,9 @@ import java.util.List;
 
 @Data
 @Builder
-public class StudentGroupDto {
+public class GuestDto {
 
     private Long id;
     private String name;
-    private List<String> studentsName;
+    private List<String> roomsName;
 }

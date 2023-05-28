@@ -12,7 +12,7 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class StudentGroup {
+public class Guest {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,6 +20,6 @@ public class StudentGroup {
     @Column
     private String name;
 
-    @OneToMany(mappedBy = "studentGroup")
-    private List<Student> students;
+    @OneToMany(mappedBy = "guest")
+    private List<Room> rooms;
 }
