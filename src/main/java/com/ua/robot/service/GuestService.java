@@ -3,11 +3,13 @@ package com.ua.robot.service;
 import com.ua.robot.domain.Room;
 import com.ua.robot.domain.Guest;
 import com.ua.robot.dto.GuestDto;
+import com.ua.robot.dto.RoomDto;
 import com.ua.robot.repository.GuestRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -31,9 +33,22 @@ public class GuestService {
         return GuestDto.builder()
                 .id(guest.getId())
                 .lastName(guest.getLastName())
+                .passport(guest.getPassport())
                 .roomsName(guest.getRooms().stream()
                         .map(Room::getName)
                         .collect(Collectors.toList()))
                 .build();
     }
+
+    public Optional<GuestDto> findById(Long id) {
+        return guestRepository.findById(id).map(GuestService::buildGuestDto);
+    }
+
+    public Optional<Guest> findByLastName(String lastName) {
+        return guestRepository.findGuestByLastName(lastName);
+    }
+
+    public void deleteGuest(Long guestId){ guestRepository.deleteById(guestId);}
+
+
 }

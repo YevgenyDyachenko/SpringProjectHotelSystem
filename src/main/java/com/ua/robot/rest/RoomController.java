@@ -51,7 +51,7 @@ public class RoomController {
 
     @PostMapping("/rooms/{id}/guests/{guestId}")
     public ResponseEntity<Void> update(@PathVariable Long id, @PathVariable Long guestId) {
-        roomService.addGroup(id, guestId);
+        roomService.addGuest(id, guestId);
 
         return ResponseEntity.status(HttpStatus.ACCEPTED).build();
     }

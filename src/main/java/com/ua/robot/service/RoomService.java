@@ -58,7 +58,7 @@ public class RoomService {
 
     public void delete(Long roomId){ roomRepository.deleteById(roomId);}
 
-    public void addGroup(Long roomId, Long guestId) {
+    public void addGuest(Long roomId, Long guestId) {
         var guest = guestRepository.findById(guestId).get();
         var room = roomRepository.findById(roomId).get();
         room.setGuest(guest);

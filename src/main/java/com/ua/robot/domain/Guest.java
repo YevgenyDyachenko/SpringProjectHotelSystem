@@ -20,6 +20,9 @@ public class Guest {
     @Column
     private String lastName;
 
+    @Column
+    private String passport;
+
     @OneToMany(mappedBy = "guest")
     private List<Room> rooms;
 }
