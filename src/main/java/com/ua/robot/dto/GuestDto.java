@@ -10,6 +10,6 @@ import java.util.List;
 public class GuestDto {
 
     private Long id;
-    private String name;
+    private String lastName;
     private List<String> roomsName;
 }

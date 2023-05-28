@@ -17,9 +17,9 @@ public class Room {
     @Column
     private String name;
     @Column
-    private int age;
+    private int price;
     @Column
-    private String address;
+    private String description;
 
     @ManyToOne
     @JoinColumn(name="guest_id")

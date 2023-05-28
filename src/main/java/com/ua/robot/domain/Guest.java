@@ -18,7 +18,7 @@ public class Guest {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
-    private String name;
+    private String lastName;
 
     @OneToMany(mappedBy = "guest")
     private List<Room> rooms;

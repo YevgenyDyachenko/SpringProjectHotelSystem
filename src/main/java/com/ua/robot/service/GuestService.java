@@ -30,7 +30,7 @@ public class GuestService {
     private static GuestDto buildGuestDto(Guest guest) {
         return GuestDto.builder()
                 .id(guest.getId())
-                .name(guest.getName())
+                .lastName(guest.getLastName())
                 .roomsName(guest.getRooms().stream()
                         .map(Room::getName)
                         .collect(Collectors.toList()))

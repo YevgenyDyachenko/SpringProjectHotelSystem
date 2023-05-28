@@ -27,13 +27,13 @@ public class RoomService {
     private static RoomDto buildRoomDto(Room room) {
         var guestName = "NO GUESTS";
         if (room.getGuest() != null) {
-            guestName = room.getGuest().getName();
+            guestName = room.getGuest().getLastName();
         }
         return RoomDto.builder()
                 .id(room.getId())
                 .name(room.getName())
-                .age(room.getAge())
-                .address(room.getAddress())
+                .price(room.getPrice())
+                .description(room.getDescription())
                 .guestName(guestName)
                 .build();
     }

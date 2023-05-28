@@ -36,7 +36,7 @@ public class RoomController {
     }
 
     @GetMapping("/rooms/find")
-    public ResponseEntity<Room> findByParam(@RequestParam String name, @RequestParam int age) {
+    public ResponseEntity<Room> findByParam(@RequestParam String name, @RequestParam int price) {
         return roomService.findByName(name)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
