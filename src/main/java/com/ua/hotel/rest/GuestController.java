@@ -1,8 +1,8 @@
-package com.ua.robot.rest;
+package com.ua.hotel.rest;
 
-import com.ua.robot.domain.Guest;
-import com.ua.robot.dto.GuestDto;
-import com.ua.robot.service.GuestService;
+import com.ua.hotel.domain.Guest;
+import com.ua.hotel.dto.GuestDto;
+import com.ua.hotel.service.GuestService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

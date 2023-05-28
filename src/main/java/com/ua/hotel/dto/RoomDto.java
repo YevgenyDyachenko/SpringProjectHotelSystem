@@ -1,4 +1,4 @@
-package com.ua.robot.dto;
+package com.ua.hotel.dto;
 
 import lombok.Builder;
 import lombok.Data;

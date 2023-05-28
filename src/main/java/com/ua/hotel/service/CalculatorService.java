@@ -1,7 +1,7 @@
-package com.ua.robot.service;
+package com.ua.hotel.service;
 
-import com.ua.robot.domain.Room;
-import com.ua.robot.repository.RoomRepository;
+import com.ua.hotel.domain.Room;
+import com.ua.hotel.repository.RoomRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

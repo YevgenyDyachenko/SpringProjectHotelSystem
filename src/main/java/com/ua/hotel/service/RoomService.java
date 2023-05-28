@@ -1,10 +1,9 @@
-package com.ua.robot.service;
+package com.ua.hotel.service;
 
-import com.ua.robot.domain.Guest;
-import com.ua.robot.domain.Room;
-import com.ua.robot.dto.RoomDto;
-import com.ua.robot.repository.GuestRepository;
-import com.ua.robot.repository.RoomRepository;
+import com.ua.hotel.domain.Room;
+import com.ua.hotel.dto.RoomDto;
+import com.ua.hotel.repository.GuestRepository;
+import com.ua.hotel.repository.RoomRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

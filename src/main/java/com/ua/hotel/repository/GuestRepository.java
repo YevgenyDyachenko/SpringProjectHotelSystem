@@ -1,8 +1,6 @@
-package com.ua.robot.repository;
+package com.ua.hotel.repository;
 
-import com.ua.robot.domain.Guest;
-import com.ua.robot.domain.Room;
-import com.ua.robot.dto.GuestDto;
+import com.ua.hotel.domain.Guest;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

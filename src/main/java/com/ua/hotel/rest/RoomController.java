@@ -1,9 +1,8 @@
-package com.ua.robot.rest;
+package com.ua.hotel.rest;
 
-import com.ua.robot.domain.Guest;
-import com.ua.robot.domain.Room;
-import com.ua.robot.dto.RoomDto;
-import com.ua.robot.service.RoomService;
+import com.ua.hotel.domain.Room;
+import com.ua.hotel.dto.RoomDto;
+import com.ua.hotel.service.RoomService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.ua.robot.domain;
+package com.ua.hotel.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

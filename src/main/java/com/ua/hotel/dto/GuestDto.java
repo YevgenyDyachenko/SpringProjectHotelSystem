@@ -1,6 +1,5 @@
-package com.ua.robot.dto;
+package com.ua.hotel.dto;
 
-import jakarta.persistence.Column;
 import lombok.Builder;
 import lombok.Data;
 

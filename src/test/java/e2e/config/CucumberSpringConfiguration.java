@@ -1,7 +1,6 @@
 package e2e.config;
 
-import com.ua.robot.RobotSpringDemoApplication;
-import e2e.steps.MainStep;
+import com.ua.hotel.RobotSpringDemoApplication;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 

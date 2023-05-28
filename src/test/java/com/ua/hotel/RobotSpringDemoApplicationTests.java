@@ -1,4 +1,4 @@
-package com.ua.robot;
+package com.ua.hotel;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
