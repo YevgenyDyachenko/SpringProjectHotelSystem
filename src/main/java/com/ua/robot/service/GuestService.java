@@ -53,6 +53,21 @@ public class GuestService {
     }
 
 
+    public Guest update(Long id, Guest guest){
+        Guest guestFmDb = guestRepository.findById(id).get();
+        if(guest.getLastName()!=null){
+            guestFmDb.setLastName(guest.getLastName());
+        }
+        if(guest.getPassport()!=null){
+            guestFmDb.setPassport(guest.getPassport());
+        }
+        if (guest.getRooms()!=null){
+            guestFmDb.setRooms(guest.getRooms());
+        }
+        return guestFmDb;
+    }
+
+
     public void deleteGuest(Long guestId){ guestRepository.deleteById(guestId);}
 
 

@@ -20,6 +20,13 @@ public class GuestController {
         guestService.save(guest);
     }
 
+    @PutMapping("/guests/updateGuest/{id}")
+    public void update(@PathVariable Long id, @RequestBody Guest guest) {
+        guest = guestService.update(id, guest);
+        guestService.save(guest);
+    }
+
+
     @GetMapping("/guests")
     public List<GuestDto> findAll() {
         return guestService.findAll();

@@ -1,5 +1,6 @@
 package com.ua.robot.service;
 
+import com.ua.robot.domain.Guest;
 import com.ua.robot.domain.Room;
 import com.ua.robot.dto.RoomDto;
 import com.ua.robot.repository.GuestRepository;
@@ -68,6 +69,41 @@ public class RoomService {
         var room = roomRepository.findById(roomId).get();
         room.setGuest(guest);
 
+
         roomRepository.save(room);
     }
+
+    public void moveGuest(Long roomId, Long newRoomId) {
+
+        var room = roomRepository.findById(roomId).get();
+        var guest = room.getGuest();
+        var room2 = roomRepository.findById(newRoomId).get();
+        room.setGuest(null);
+        room2.setGuest(guest);
+
+        roomRepository.save(room);
+        roomRepository.save(room2);
+    }
+
+
+
+    public Room updateInfo(Long id, Room room){
+
+        Room roomFmDb = roomRepository.findById(id).get();
+        if (room.getName() != null) {
+            roomFmDb.setName(room.getName());
+        }
+        if (room.getPrice() != 0) {
+            roomFmDb.setPrice(room.getPrice());
+        }
+        if (room.getDescription() != null) {
+            roomFmDb.setDescription(room.getDescription());
+        }
+        if (room.getGuest() != null) {
+            roomFmDb.setGuest(room.getGuest());
+        }
+
+        return roomFmDb;
+    }
+
 }

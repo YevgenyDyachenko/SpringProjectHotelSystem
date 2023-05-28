@@ -1,5 +1,6 @@
 package com.ua.robot.rest;
 
+import com.ua.robot.domain.Guest;
 import com.ua.robot.domain.Room;
 import com.ua.robot.dto.RoomDto;
 import com.ua.robot.service.RoomService;
@@ -54,6 +55,20 @@ public class RoomController {
         roomService.addGuest(id, guestId);
 
         return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+    }
+
+    @PostMapping("/rooms/{roomId}/move/{toRoomId}")
+    public ResponseEntity<Void> move(@PathVariable Long roomId, @PathVariable Long toRoomId) {
+        roomService.moveGuest(roomId, toRoomId);
+
+        return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+    }
+
+
+    @PutMapping("/rooms/updateRoom/{id}")
+    public void updateInfo(@PathVariable Long id, @RequestBody Room room) {
+        room = roomService.updateInfo(id, room);
+        roomService.save(room);
     }
 
     @DeleteMapping("/rooms/{id}")
